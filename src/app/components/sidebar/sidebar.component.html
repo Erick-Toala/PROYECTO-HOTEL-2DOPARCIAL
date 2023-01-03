@@ -1,0 +1,91 @@
+<!-- link para los logos -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!-- Barra lateral que contendrá todas las opciones de navegación por el sistema -->
+<div class="sidebar">
+    <div class="logo_contenido">
+        <div class="logoHotel">
+            <!-- Icono y nombre del hotel -->
+            <i class='bx bx-building'></i>
+            <div class="logo_nombre">Mi Hotel</div>
+        </div>
+        <!-- Boton para desplegar o plegar la barra lateral -->
+        <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <!-- Lista de navegacion de las opciones del sistema-->
+    <!-- se usó logos <i></i> en cada item para que se vea más fachero, 
+    estos proporcionados por la pagina boxicons-->
+    <ul class="nav_list">
+        <li>
+                <!-- item Buscar -->
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Buscar...">
+                <span class="info_herramienta">Buscar</span>
+        </li>
+        <li>
+            <!-- item para la Dashboard -->
+            <a routerLink="/dashboard"> <!-- Redireccionará al contenido inicial-->
+                <i class='bx bx-grid-alt'></i>
+                <span class="nombre_link">Dashboard</span>
+            </a>
+                <span class="info_herramienta">Dashboard</span>
+        </li>
+        <li>
+            <!-- item para la Tienda del hotel -->
+            <a routerLink="/tienda"> <!-- Redireccionará a la página de la tienda-->
+                <i class='bx bx-store'></i> 
+                <span class="nombre_link">Tienda</span>
+            </a>
+                <span class="info_herramienta">Tienda</span>
+        </li>
+        <li>
+            <!-- item para el Mantenimiento del hotel -->
+            <a routerLink="/mantenimiento"> <!-- Redireccionará a la página de mentenimiento-->
+                <i class='bx bx-cog' ></i>
+                <span class="nombre_link">Mantenimiento</span>
+            </a>
+                <span class="info_herramienta">Mantenimiento</span>
+        </li>
+        <li>
+            <!-- item para los Reportes del hotel -->
+            <a routerLink="/reportes"> <!-- Redireccionará a la página de reportes-->
+                <i class='bx bx-bar-chart-alt-2'></i>
+                <span class="nombre_link">Reportes</span>
+            </a>
+                <span class="info_herramienta">Reportes</span>
+        </li>
+        <li> 
+            <!-- item para los Usuarios del hotel -->
+            <a routerLink="/usuarios"> <!-- Redireccionará a la página de usuarios-->
+                <i class='bx bx-user'></i>
+                <span class="nombre_link">Usuarios</span>
+            </a>
+                <span class="info_herramienta">Usuarios</span>
+        </li>
+        <li>
+            <!-- item para los Clientes del hotel -->
+            <a routerLink="/clientes"> <!-- Redireccionará a la página de clientes-->
+                <i class='bx bx-group'></i>
+                <span class="nombre_link">Clientes</span>
+            </a>
+                <span class="info_herramienta">Clientes</span>
+        </li>
+    </ul>
+    <!-- Esta parte mostrará el usuario que haya iniciado sesión en el sistema-->
+    <div class="perfil_contenido">
+        <div class="perfil">
+            <div class="perfil_detalles">
+                <!-- foto respectiva del usuario -->
+                <img src="https://i.pinimg.com/564x/0c/75/3f/0c753f6445563b6e9c821c73e47e24e0.jpg" alt="">
+                <div class="nombre_trabajo">
+                    <!-- Nombre y rol respectivos del usuario -->
+                    <div class="nombre">Erick Toala</div>
+                    <div class="rol">Administrador</div>
+                </div>
+            </div>
+            <!-- icono para la opción de cerrar sesión-->
+            <a routerLink="/registro"> 
+                <i class='bx bx-log-out' id="salir"></i>
+            </a>
+        </div>   
+    </div>
+</div>

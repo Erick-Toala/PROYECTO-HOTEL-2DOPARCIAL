@@ -1,0 +1,46 @@
+[{
+    "id": 1,
+    "nombre":"Erick Alexander",
+    "apellido":"Toala Intriago",
+    "tipoDocumento":"Cédula",
+    "nroDocumento":"0803413111",
+    "correo":"toalaerick56@gmail.com",
+    "estado":"Soltero"
+},
+{
+    "id": 2,
+    "nombre":"Luis Antonio",
+    "apellido":"Tuarez Castro",
+    "tipoDocumento":"Cédula",
+    "nroDocumento":"1234567890",
+    "correo":"luistuarez@gmail.com",
+    "estado":"Soltero"
+},
+{
+    "id": 3,
+    "nombre":"Joan Job",
+    "apellido":"Gallardo Alcivar",
+    "tipoDocumento":"Cédula",
+    "nroDocumento":"1308648361",
+    "correo":"joangallardo@gmail.com",
+    "estado":"Soltero"
+},
+{
+    "id": 4,
+    "nombre":"Ashly Mayerly",
+    "apellido":"Moran Cabeza",
+    "tipoDocumento":"Cédula",
+    "nroDocumento":"0805682637",
+    "correo":"ashlymoran28@gmail.com",
+    "estado":"Soltero"
+},
+{
+    "id": 5,
+    "nombre":"Carol Pamela",
+    "apellido":"Vera Castro",
+    "tipoDocumento":"Cédula",
+    "nroDocumento":"1399653728",
+    "correo":"pamelavera@gmail.com",
+    "estado":"Soltero"
+}
+]

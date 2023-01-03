@@ -1,0 +1,122 @@
+<!-- contenido principal del sistema-->
+<div class="inicio_contenido">
+    <div class="contenido_pagina">
+        <div class="tarjeta sombra mb-4">
+            <div class="tarjeta_encabezado py-3 fondo_primario">
+                <h6 class="margen0 fuente_negrita texto_blanco">Lista de Habitaciones</h6>
+            </div>
+            <div class="tarjeta_cuerpo">
+                <div class="fila">
+                    <div class="columna_tipo12">
+                        <button class="cta btn btn-success btn-sm" type="button" onclick="abrirModal(null)">Crear Nuevo</button>                    
+                    </div>
+                </div>
+                <hr />
+                <div class="fila">
+                    <div class="columna_tipo12">
+                        <div class="tabla_responsiva">
+                            <table class="tabla tabla_bordes" id="tabla" style="width:100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Numero</th>
+                                        <th>Detalle</th>
+                                        <th>Precio</th>
+                                        <th>Categoria</th>
+                                        <th>Piso</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <thead *ngFor="let habitaciones of habitaciones">
+                                    <tr>
+                                        <th style="font-weight: 100;">{{habitaciones.numero}}</th>
+                                        <th style="font-weight: 100;">{{habitaciones.detalle}}</th>
+                                        <th style="font-weight: 100;">{{habitaciones.precio}}</th> 
+                                        <th style="font-weight: 100;">{{habitaciones.categoria}}</th> 
+                                        <th style="font-weight: 100;">{{habitaciones.piso}}</th>
+                                        <th>
+                                            <button class="btn btn-danger btn-sm" (click)="deleteHabitaciones(habitaciones)">Eliminar</button>
+                                        </th>    
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal modal-close">
+                <div class="ventana_modal_contenido">
+                    <div class="ventana_modal_encabezado fondo_primario texto_blanco">
+                        <h5 class="ventana_modal_titulo" id="exampleModalLabel">Habitación</h5>
+                        <p class="close">X</p>
+                    </div>
+                    <div class="ventana_modal_cuerpo">
+                        <input id="txtid" type="hidden" value="0" />
+                        <form id="formNivel" (submit)="addhabitacion(newNumero, newDetalle,newPrecio, newCategoria, newPiso)">
+                            <div class="fila">
+                                <div class="columna_tipo12">
+                                    <div class="grupo_form">
+                                        <label for="txtdescripcion">Número:</label>
+                                        <input type="text" class="control_entrada required" id="txtnumero" name="descripcion" autocomplete="off"
+                                        #newNumero>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fila">
+                                <div class="columna_tipo12">
+                                    <div class="grupo_form">
+                                        <label for="txtdescripcion">Detalle:</label>
+                                        <input type="text" class="control_entrada required" id="txtdocumento" name="descripcion" autocomplete="off"
+                                        #newDetalle>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fila">
+                                <div class="columna_tipo12">
+                                    <div class="grupo_form">
+                                        <label for="txtdescripcion">Precio:</label>
+                                        <input type="text" class="control_entrada required" id="txtnombre" name="descripcion" autocomplete="off"
+                                        #newPrecio>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fila">
+                                <div class="columna_tipo12">
+                                    <div class="grupo_form">
+                                        <label for="txtdescripcion">Categoria:</label>
+                                        <input type="text" class="control_entrada required" id="txtapellido" name="descripcion" autocomplete="off"
+                                        #newCategoria>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fila">
+                                <div class="columna_tipo12">
+                                    <div class="grupo_form">
+                                        <label for="txtdescripcion">Piso:</label>
+                                        <input type="text" class="control_entrada required" id="txtcorreo" name="descripcion" autocomplete="off"
+                                        #newPiso>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fila">
+                                <div class="columna_tipo12">
+                                    <div class="grupo_form">
+                                        <label for="cboEstado">Estado:</label>
+                                        <select id="cboEstado" class="control_entrada">
+                                            <option value="1">Activo</option>
+                                            <option value="0">No Activo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">Guardar</button>
+                        </form>
+    
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

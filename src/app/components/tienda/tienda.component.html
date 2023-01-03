@@ -1,0 +1,114 @@
+<!-- contenido principal del sistema-->
+<form (submit)="addProductos(newProducto, newPrecio, newCantidad)">
+<div class="inicio_contenido">
+    <div class="contenido_pagina">
+        <div class="tarjeta sombra-sm">
+            <div class="tarjeta_cuerpo p-3">
+                <h6 class="tarjeta-title fuente_negrita texto-primario" style="font-size: 15px;">Resumen de la Habitación</h6>
+                <div class="form-fila">
+                    <div class="columna-md-3">
+                        <label class="form-texto fuente_negrita mb-0">Número:</label>
+                        <label class="form-texto">001</label>
+                    </div>
+                    <div class="columna-md-3">
+                        <label class="form-texto fuente_negrita mb-0">Detalles:</label>
+                        <label class="form-texto">Detalles</label>
+                    </div>
+                    <div class="columna-md-3">
+                        <label class="form-texto fuente_negrita mb-0">Categoria:</label>
+                        <label class="form-texto">Individual</label>
+                    </div>
+                    <div class="columna-md-3">
+                        <label class="form-texto fuente_negrita mb-0">Piso:</label>
+                        <label class="form-texto">PRIMER</label>
+                    </div>
+                </div>
+                <div class="form-fila">
+                    <div class="columna-md-3">
+                        <label class="form-texto fuente_negrita mb-0">Cliente:</label>
+                        <label class="form-texto mb-0">Erick Toala</label>
+                    </div>
+                    <div class="columna-md-3">
+                        <label class="form-texto fuente_negrita mb-0">Nro. Documento:</label>
+                        <label class="form-texto mb-0">0803413111</label>
+                    </div>
+                    <div class="columna-md-3">
+                        <label class="form-texto fuente_negrita mb-0">Correo:</label>
+                        <label class="form-texto mb-0">toalaercik56@gmail.com</label>
+                    </div>
+                    <div class="columna-md-3">
+                        <label class="form-texto fuente_negrita mb-0">Fecha Entrada:</label>
+                        <label class="form-texto mb-0">28/10/2022</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="tarjeta mt-3 sombra-sm">
+                <div class="tarjeta_encabezado tarjeta-title fuente_negrita texto-primario">
+                    Detalle venta
+                </div>
+                <div class="tarjeta_cuerpo card-body p-3" >
+                    <div class="form-fila alinear-elementos-fin">
+                        <div class="columna-md-3">
+                            <label for="validationCustom01">Producto:</label>
+                            <input type="text" class="control_entrada" id="txtproducto"
+                            #newProducto>
+                        </div>
+                        <div class="columna-md-2">
+                            <label for="validationCustom01">Precio:</label>
+                            <input type="text" class="control_entrada" id="txtprecio"
+                            #newPrecio>
+                        </div>
+                        <div class="columna-md-2">
+                            <label for="validationCustom01">Cantidad</label>
+                            <input type="number" class="control_entrada" id="txtcantidad" value="1" min="1" max="10"
+                            #newCantidad>
+                        </div>
+                        <div class="columna-md-2">
+                            <button class="btn btn-success btn-block" >Agregar</button>
+                        </div>
+                    </div>
+                    <hr />
+        
+                    <div class="fila">
+                        <div class="columna-12">
+                            <table class="tabla tabla_bordes tabla-sm" id="tbventa">
+                                <thead class="thead-oscuro">
+                                    <tr>
+                                        <th></th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Precio Unitario</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <thead *ngFor="let productos of productos">
+                                    <tr>
+                                        <th></th>
+                                        <th>{{productos.producto}}</th>
+                                        <th>{{productos.cantidad}}</th>
+                                        <th>{{productos.precio}}</th>
+                                        <th>
+                                            <button class="btn btn-danger btn-sm" (click)="deleteProductos(productos)">Eliminar</button>
+                                        </th>  
+                                    </tr>
+                                </thead>
+                                <tbody>
+        
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                    
+                    <hr />
+                    <div class="fila justificar-contenido-fin">
+                        <div class="columna-2">
+                            <button id="btnfinalizarventa" class="btn btn-primary btn-block" type="button">Finalizar Venta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</form>

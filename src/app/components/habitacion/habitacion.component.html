@@ -1,0 +1,137 @@
+<!-- contenido principal del sistema-->
+<div class="inicio_contenido">
+    <div class="contenido_pagina">
+        <!-- contenedor denominado tarjeta que contendrá información básica de la habitació seleccionada-->
+        <div class="tarjeta">
+            <!-- se presenta los detalles de la habitacion como: el número, complementos, categoria y piso-->
+            <div class="tarjeta_cuerpo">
+                <h5 class="tarjeta_titulo">Detalles de la Habitación</h5>
+                <!-- este div contrendrá en forma de fila los detalles de la habitación -->
+                <div class="fila">
+                    <!-- y estos detalles serán separados en dos columnas, primera columna-->
+                    <div class="columna">
+                        <!-- dentro habrán tambien filas y columan "secundarias" para la etiqueta y el dato -->
+                        <div class="fila">
+                            <label class="columna_etiqueta">Número:</label>
+                            <div class="columna_datos">
+                                <label class="label_dato">NRO: 001</label>
+                            </div>
+                        </div>
+                        <div class="fila">
+                            <label class="columna_etiqueta">Detalles:</label>
+                            <div class="columna_datos">
+                                <label class="label_dato">WIFI + BAÑO + TV + CABLE</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- segunda columna -->
+                    <div class="columna">
+                        <div class="fila">
+                            <label class="columna_etiqueta">Categoria:</label>
+                            <div class="columna_datos">
+                                <label class="label_dato">Individual</label>
+                            </div>
+                        </div>
+                        <div class="fila">
+                            <label class="columna_etiqueta">Piso:</label>
+                            <div class="columna_datos">
+                                <label class="label_dato">Primero</label>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <!-- contenedor denominado tarjeta2 en donde se registrará la información del cliente que hará la reservación de la habitación-->
+        <!-- tambien contendrá la información de registro sobre la reservación-->
+        <div class="tarjeta2">
+            <!-- se presenta los datos que deben ser ingresados como: Nro Documento, tipo, nombre, etc..-->
+            <div class="tarjeta_cuerpo">
+                <!-- div para las filas de Detalles del Cliente y Detalles de Reservación-->
+                <div class="fila">
+                    <!-- columna para los datos del cliente-->
+                    <div class="columna">
+                        <h5 class="tarjeta_titulo">Detalle del Cliente</h5>
+                        <div class="grupo_form">
+                            <label>Nro Documento:</label>
+                            <div class="input_grupo">
+                                <!-- input para el ingreso del Nro de Documento-->
+                                <input type="text" class="control_entrada" id="txtdocumento">
+                                <div class="input_adjuntar">
+                                    <!-- botón para buscar un cliente ya antes registrado (aún no desarrollado)-->
+                                    <button class="btn btn-success" id="btnbuscar" type="button">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grupo_form">
+                            <label>Tipo de Documento:</label>
+                            <!-- select para el esocger el tipo de Documento-->
+                            <select class="control_entrada" id="cbotipodocumento">
+                                <option value="DNI">DNI</option>
+                                <option value="PASAPORTE">PASAPORTE</option>
+                                <option value="CARNET EXTRANJERIA">CARNET EXTRANJERIA</option>
+                            </select>
+                        </div>
+                        <div class="grupo_form">
+                            <label>Nombres:</label>
+                            <!-- input para el ingreso del nombre-->
+                            <input type="text" class="control_entrada" id="txtnombres">
+                        </div>
+                        <div class="grupo_form">
+                            <label>Apellidos:</label>
+                            <!-- input para el ingreso del apellido-->
+                            <input type="text" class="control_entrada" id="txtapellidos">
+                        </div>
+                        <div class="grupo_form">
+                            <label>Correo:</label>
+                            <!-- input para el ingreso del correo-->
+                            <input type="email" class="control_entrada" id="txtcorreo">
+                        </div>
+                    </div>
+                    <!-- columna para los datos de la reservación-->
+                    <div class="columna">
+                        <h5 class="tarjeta_titulo">Detalle de Reservación</h5>
+                        <!-- dentro habrá dos filas, la primera para Fecha entrada y Fecha salida-->
+                        <div class="fila_form">
+                            <div class="grupo_form columna6">
+                                <label>Fecha Entrada:</label>
+                                <!-- input para el ingreso de la fecha de entrada, que por defecto será la fecha actual, y por eso está desactivada-->
+                                <input type="text" class="control_entrada" id="txtfechaentrada" disabled="disabled">
+                            </div>
+                            <div class="grupo_form columna6">
+                                <label>Fecha Salida:</label>
+                                <!-- input para el ingreso de la fecha de salida-->
+                                <input type="text" class="control_entrada" id="txtfechasalida">
+                            </div>
+                        </div>
+                        <div class="fila_form">
+                            <div class="grupo_form columna6">
+                                <label>Precio:</label>
+                                <!-- input para el precio de la reservación, que dependerá de la fecha de salida -->
+                                <input type="text" class="control_entrada" id="txtprecio" disabled="disabled" value="30.00">
+                                <input type="hidden" class="control_entrada" id="txtpreciobase" disabled="disabled" value="30.00">
+                            </div>
+                            <div class="grupo_form columna6">
+                                <label>Adelanto:</label>
+                                <!-- input para ingresar un adelanto del pago de la reservación -->
+                                <input type="text" class="control_entrada" id="txtadelanto" value="0">
+                            </div>
+                        </div>
+                        <div class="grupo_form2">
+                            <label>Observación:</label>
+                            <!-- input para el cualquier descripción/observación que se quiera hacer-->
+                            <textarea class="control_entrada2" id="txtobservacion" rows="3"></textarea>
+                        </div>
+                        <div class="fila_form justificar_contenido_fin">
+                            <!-- Y por ultimo un botón para finalizar y regitrar la reservación -->
+                            <button type="button" class="btn btn-primary w-25" id="btnregistrar">Registrar</button>
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<!-- contenido principal del sistema-->
+<div class="inicio_contenido">
+    <div class="contenido_pagina">
+        <div class="tarjeta sombra mb-4">
+            <div class="tarjeta_encabezado py-3 fondo_primario">
+                <h6 class="margen0 fuente_negrita texto_blanco">Lista de Usuarios</h6>
+            </div>
+            <div class="tarjeta_cuerpo">
+                <div class="fila">
+
+                </div>
+                <hr />
+                <div class="fila">
+                    <div class="columna_tipo12">
+                        <div class="tabla_responsiva">
+                            <table class="tabla tabla_bordes" id="tabla" style="width:100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Usuario</th>
+                                        <th>Contraseña</th>
+                                        <th>Nombre</th>
+                                        <th>Correo Electrónico</th>
+                                        <th>Teléfono</th>   
+                                        <th></th>            
+                                    </tr>
+                                </thead>
+                                <!-- con el for se recorrerá cada uno de los clientes del archivo json-->
+                                <thead *ngFor="let usuarios of usuarios">
+                                    <tr>
+                                        <!-- se cargará todos los datos del archivo json-->
+                                        <th style="font-weight: 100;">{{usuarios.usuario}}</th>
+                                        <th style="font-weight: 100;">{{usuarios.contrasena}}</th> 
+                                        <th style="font-weight: 100;">{{usuarios.nombre}}</th> 
+                                        <th style="font-weight: 100;">{{usuarios.correo}}</th> 
+                                        <th style="font-weight: 100;">{{usuarios.telefono}}</th>
+                                        <th style="font-weight: 100;">
+                                            <button class="btn btn-danger btn-sm" (click)="deleteUsuarios(usuarios)">Eliminar</button>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Usuario</th>
+                                        <th>Contraseña</th>
+                                        <th>Nombre</th>
+                                        <th>Correo Electrónico</th>
+                                        <th>Teléfono</th>  
+                                        <th></th>
+                                    </tr>
+                                </tfoot>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>        
+    </div>
+</div>

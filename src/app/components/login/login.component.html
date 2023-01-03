@@ -1,0 +1,41 @@
+<main>
+    <!-- contendor de todo-->
+    <div class="contenedor" id="formulario">
+        <!-- div para crear la caja trasera cuando se quiera resitrar o iniciar sesión-->
+        <div class="caja_trasera">
+            <!-- en caso de que ya se tenga una cuenta esta caja trasera estará visible-->
+            <div class="caja_trasera-login">
+                <h3>¿Ya tienes una cuenta?</h3>
+                <p>Inicia sesión para entrar en la página</p>
+                <button id="btnIniciarSesion">Iniciar Sesión</button>
+            </div>
+            <!-- en caso de que se quiera registrar esta caja trasera estará visible-->
+            <div class="caja_trasera-registro">
+                <h3>¿Aún no tienes una cuenta?</h3>
+                <p>Regístrate para que puedas iniciar sesión</p>
+                <a routerLink="/registro">
+                    <button id="btnRegistrarse">Regístrarse</button>
+                </a>
+            </div>
+        </div>
+
+        <!--Formulario de Login y registro-->
+        <div class="contenedor_LoginRegistro">
+            <!--Login-->
+            <form action="" class="frmLogin">
+                <h2>Iniciar Sesión</h2>
+                <div class="formulario__grupo" id="grupo__usuario">
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Usuario">
+                    </div>
+                </div>
+                <div class="formulario__grupo" id="grupo__password">
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password" id="password" placeholder="Contraseña">
+                    </div>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+</main>
